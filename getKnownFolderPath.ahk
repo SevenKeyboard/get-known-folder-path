@@ -23,9 +23,9 @@ getKnownFolderPath(knownFolderId, dwFlags:=0x00000000, hToken:=0)    {
     knownFolderPath:=""
     loop 1    {
         varSetCapacity(GUID,16,0)
-        if (dllCall("Ole32.dll\IIDFromString", "Str",knownFolderId, "Ptr",&GUID)!=S_OK)
+        if (dllCall("Ole32.dll\IIDFromString", "Str",knownFolderId, "Ptr",&GUID, "Int")!==S_OK)
             break
-        if (dllCall("Shell32.dll\SHGetKnownFolderPath", "Ptr",&GUID, "UInt",dwFlags, "Ptr",hToken, "Ptr*",ppszPath)!=S_OK)
+        if (dllCall("Shell32.dll\SHGetKnownFolderPath", "Ptr",&GUID, "UInt",dwFlags, "Ptr",hToken, "Ptr*",ppszPath, "Int")!==S_OK)
             break
         knownFolderPath:=strGet(ppszPath,"UTF-16")
         dllCall("Ole32.dll\CoTaskMemFree", "Ptr",ppszPath)
