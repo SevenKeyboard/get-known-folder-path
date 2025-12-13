@@ -18,6 +18,14 @@ Example Usage:
     msgBox getKnownFolderPath("{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}") ;  C:\Program Files (x86)
 */
 
+class VersionManager_getKnownFolderPath
+{
+    static _ := this._init()
+    static _init()    {
+        global
+        GETKNOWNFOLDERPATH_VERSION := "1.0.0"
+    }
+}
 getKnownFolderPath(knownFolderId, dwFlags:=0x00000000, hToken:=0)    {
     static S_OK:=0
     knownFolderPath:=""
