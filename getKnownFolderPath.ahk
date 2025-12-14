@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v1.1.0+
+﻿#Requires AutoHotkey v1.1.35+
 ;==============================================================
 ; GetKnownFolderPath — Wrapper for SHGetKnownFolderPath
 ;
