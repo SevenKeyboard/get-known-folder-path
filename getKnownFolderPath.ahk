@@ -7,9 +7,9 @@
 ; License: The Unlicense
 ;
 ; Documentation / References:
-;   SHGetKnownFolderPath():
+;   SHGetKnownFolderPath()
 ;     https://www.autohotkey.com/boards/viewtopic.php?t=75602
-;   KNOWNFOLDERID:
+;   KNOWNFOLDERID
 ;     https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid
 ;==============================================================
 
